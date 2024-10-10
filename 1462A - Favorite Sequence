@@ -1,0 +1,34 @@
+import java.util.*;
+public class A_Favorite_Sequence {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-- >0){
+        int n=sc.nextInt();
+        long arr[]=new long[(int)n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextLong();
+        }
+        long arrnew[]=new long[(int)n];
+        int s=0;
+        int e=n-1;
+        int j=0;
+        while(s<=e){
+            if(j%2==0){
+                arrnew[j]=arr[s];
+                s++;
+            }
+            else if(j%2==1){
+                arrnew[j]=arr[e];
+                e--;
+            }
+            j++;
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(arrnew[i]+" ");
+        }
+        System.out.println();
+ 
+        }
+}
+}
