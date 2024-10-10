@@ -1,0 +1,34 @@
+import java.util.*;
+public class A_Life_Without_Zeros {
+    public static long remove(long n){
+        
+        long sum=0;
+        while(n>0){
+            long a=n%10;
+            if(a!=0){
+                sum=sum*10+a;
+            }
+            n=n/10;
+        }
+        long ret=0;
+        while(sum>0){
+            long b=sum%10;
+            ret=ret*10+b;
+            sum=sum/10;
+        }
+        return ret;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long a=sc.nextLong();
+        long b=sc.nextLong();
+        long c=a+b;
+        a=remove(a);
+        b=remove(b);
+        c=remove(c);
+        if(a+b==c){
+            System.out.println("YES");
+        }
+        else System.out.println("NO");
+}
+}
