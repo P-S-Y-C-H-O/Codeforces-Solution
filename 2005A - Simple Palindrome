@@ -1,0 +1,25 @@
+import java.util.*;
+public class A_Simple_Palindrome {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-- >0){
+        int n=sc.nextInt();
+        String s="aeiou";
+        String ans="";
+        int j=0;
+        for(int i=0;i<n;i++){
+            ans+=s.charAt(j);
+            j++;
+            if(j==5){
+                j=0;
+            }
+        }
+        char temparr[]= ans.toCharArray();
+        Arrays.sort(temparr);
+        String res= new String(temparr);
+        System.out.println(res);
+ 
+        }
+}
+}
